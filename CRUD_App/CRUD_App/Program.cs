@@ -26,6 +26,7 @@
             String nomejogo = "";
             int id = 0;
 
+
             Jogos jogo = new Jogos(1, "Ty Runner", "Jogo de corrida infinita", TipoGenero.Aventura, TipoConsole.Outro);
             listadejogos.Inserir(jogo);
             jogo = new Jogos(2, "Jackpot", "caca-niquel", TipoGenero.Casual, TipoConsole.Outro);
@@ -51,7 +52,7 @@
                         jogo.Descricao = Console.ReadLine();
                         Console.Write("Informe o Genero Acao [0], Aventura [1], Casual [2], Puzze [3], Estrategia [4], Outro [5]: ");
                         jogo.Genero = (TipoGenero)Convert.ToInt32(Console.ReadLine());
-                        Console.Write("Informe o Console PS4 [0], PS5 [1], Switch [2], Xbox 360 [3], Xbox One [4], PC [5], Outro [6]: ");
+                        Console.Write("Informe o Console PS4 [0], PS5 [1], Switch [2], Xbox One [3], Xbox Series X/S [4], PC [5], Outro[6]: ");
                         jogo.Console = (TipoConsole)Convert.ToInt32(Console.ReadLine());
                         if (listadejogos.Inserir(jogo))
                         {
@@ -88,7 +89,7 @@
                         jogo.Descricao = Console.ReadLine();
                         Console.Write("Informe o Genero Acao [0], Aventura [1], Casual [2], Puzze [3], Estrategia [4], Outro [5]: ");
                         jogo.Genero = (TipoGenero)Convert.ToInt32(Console.ReadLine());
-                        Console.Write("Informe o Console PS4 [0], PS5 [1], Switch [2], Xbox 360 [3], Xbox One [4], PC [5], Outro [6]: ");
+                        Console.Write("Informe o Console PS4 [0], PS5 [1], Switch [2], Xbox One [3], Xbox Series X/S [4], PC [5], Outro[6]: ");
                         jogo.Console = (TipoConsole)Convert.ToInt32(Console.ReadLine());
                         if (listadejogos.Alterar(jogo))
                         {
@@ -136,7 +137,7 @@
                         break;
                     case 6: 
                         Console.WriteLine("Listar todos os jogos por console");
-                        Console.Write("Informe o Console PS4 [0], PS5 [1], Switch [2], Xbox 360 [3], Xbox One [4], PC [5], Outro [6]: ");
+                        Console.Write("Informe o Console PS4 [0], PS5 [1], Switch [2], Xbox One [3], Xbox Series X/S [4], PC [5], Outro[6]: ");
                         TipoConsole console = (TipoConsole)Convert.ToInt32(Console.ReadLine());
                         lista = listadejogos.ListarPorConsole(console);
 

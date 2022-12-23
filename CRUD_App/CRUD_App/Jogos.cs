@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CRUD_App
 {
     public enum TipoGenero { Acao, Aventura, Casual, Puzze, Estrategia, Outro }
-    public enum TipoConsole { PS4, PS5, Switch, Xbox_One, Xbox_SeriesX,Xbox_SeriesS, PC, Outro }
+    public enum TipoConsole { PS4, PS5, Switch, Xbox_One, Xbox_SeriesX, Xbox_SeriesS, PC, Outro }
 
     public class Jogos
     {

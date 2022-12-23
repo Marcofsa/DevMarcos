@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ProjetoFinalDotNet.Models.Biblioteca>
+
+@{
+    ViewData["Title"] = "Lista e Cadastro";
+}
+<link rel="stylesheet" href="~/css/style.css">
+
+<h1 class="text-center text-element">Lista e Cadastro</h1>
+<hr/>
+
+<h2>
+    <a asp-action="Create" class="botao text-element">Cadastrar novo</a>
+</h2>
+<table class="table fundo">
+        <thead >
+            <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Plataforma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descrição)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Plataforma)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Categoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descrição)
+            </td>
+            <td >
+               <a class="text-element botaoli" asp-action="Edit" asp-route-id="@item.Id">Alterar</a>
+               <a class="text-element botaoli" asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+               <a class="text-element botaoli" asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

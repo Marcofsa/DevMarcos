@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'pretendo';
+    src: url('../font/pretendo.ttf') format('truetype');
+}
+
+.text-element {
+    font-family: pretendo, Arial, sans-serif;
+}
+
+
+.caixa {
+    position: relative;
+    width: 300px !important;
+    margin: 0 auto;
+}
+
+.cabeca {
+    background-color: #ffffff;
+    text-align: center;
+}
+.fundo {
+    width: auto !important;
+    height: auto !important;
+    background-image: url('../Img/fonte.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.background {
+    width: auto !important;
+    height: auto !important;
+    background-image: url('../Img/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.botao:hover
+{
+    text-transform: uppercase;
+    font-size: 29px;
+    text-decoration: none;
+    color: #1b26e9;
+}
+
+.botaoli:hover {
+    text-transform: uppercase;
+    font-size: 15px;
+    text-decoration: none;
+    color: #1b26e9;
+}
+

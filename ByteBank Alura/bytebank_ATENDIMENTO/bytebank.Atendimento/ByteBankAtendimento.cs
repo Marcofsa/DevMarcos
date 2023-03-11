@@ -4,8 +4,8 @@ using Newtonsoft.Json;
 
 namespace bytebank_ATENDIMENTO.bytebank.Atendimento
 {
-#nullable disable
-    internal class ByteBankAtendimento
+    #nullable disable
+    internal  class ByteBankAtendimento
     {
 
         private List<ContaCorrente> _listaDeContas = new List<ContaCorrente>(){
@@ -13,7 +13,7 @@ namespace bytebank_ATENDIMENTO.bytebank.Atendimento
           new ContaCorrente(95, "951258-X"){Saldo=200,Titular = new Cliente{Cpf="22222",Nome ="Pedro"}},
           new ContaCorrente(94, "987321-W"){Saldo=60,Titular = new Cliente{Cpf="33333",Nome ="Marisa"}}
         };
-
+           
 
         public void AtendimentoCliente()
         {
@@ -60,7 +60,7 @@ namespace bytebank_ATENDIMENTO.bytebank.Atendimento
                             break;
                         case '5':
                             PesquisarContas();
-                            break;
+                            break;                  
                         case '6':
                             ExportarContas();
                             break;
@@ -98,7 +98,7 @@ namespace bytebank_ATENDIMENTO.bytebank.Atendimento
                     Formatting.Indented);
                 try
                 {
-                    FileStream fs = new FileStream(@"c:\tmp\export\contas.json",
+                    FileStream fs = new FileStream(@"c:\tmp\export\contas.json", 
                         FileMode.Create);
                     using (StreamWriter streamwriter = new StreamWriter(fs))
                     {

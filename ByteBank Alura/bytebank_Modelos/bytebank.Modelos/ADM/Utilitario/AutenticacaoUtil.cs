@@ -8,10 +8,10 @@ namespace bytebank_Modelos.bytebank.Modelos.ADM.Utilitario
 {
     internal class AutenticacaoUtil
     {
-        public bool ValidarSenha(string senhaVerdadeira,
-            string senhaTentativa)
+        public bool ValidarSenha(string senhaverdadeira,
+            string senhatentativa)
         {
-            return senhaVerdadeira.Equals(senhaTentativa);
+            return senhaverdadeira.Equals(senhatentativa);
         }
     }
 }

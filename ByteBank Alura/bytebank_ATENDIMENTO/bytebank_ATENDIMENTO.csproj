@@ -16,6 +16,12 @@
     <ProjectReference Include="..\bytebank_Modelos\bytebank_Modelos.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="ByteBank_GeradorChavePix">
+      <HintPath>..\..\ByteBank_GeradorChavePix\ByteBank_GeradorChavePix\bin\Debug\net6.0\ByteBank_GeradorChavePix.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 
 
 

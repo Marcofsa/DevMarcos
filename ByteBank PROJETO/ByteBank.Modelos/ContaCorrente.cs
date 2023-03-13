@@ -14,7 +14,6 @@ namespace ByteBank.Modelos
         private static int TaxaOperacao;
 
         public static int TotalDeContasCriadas { get; private set; }
-
         public Cliente Titular { get; set; }
 
         public int ContadorSaquesNaoPermitidos { get; private set; }

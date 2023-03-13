@@ -15,22 +15,14 @@ namespace ByteBank.SistemaAgencia
             // pagina?argumentos
             // 012345678
 
-
-
             string textoVazio = "";
             string textoNulo = null;
             string textoQualquer = "kjhfsdjhgsdfjksdf";
-
 
             Console.WriteLine(String.IsNullOrEmpty(textoVazio));
             Console.WriteLine(String.IsNullOrEmpty(textoNulo));
             Console.WriteLine(String.IsNullOrEmpty(textoQualquer));
             Console.ReadLine();
-
-
-
-
-
 
             ExtratorValorDeArgumentosURL extrator = new ExtratorValorDeArgumentosURL("");
 
@@ -43,7 +35,6 @@ namespace ByteBank.SistemaAgencia
             Console.WriteLine(url);
             string argumentos = url.Substring(indiceInterrogacao + 1);
             Console.WriteLine(argumentos);
-
 
             Console.ReadLine();
         }

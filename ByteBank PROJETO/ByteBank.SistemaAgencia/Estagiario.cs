@@ -14,12 +14,10 @@ namespace ByteBank.SistemaAgencia
         {
 
         }
-
         public override void AumentarSalario()
         {
             // Qualquer código
         }
-
         protected override double GetBonificacao()
         {
             throw new NotImplementedException();

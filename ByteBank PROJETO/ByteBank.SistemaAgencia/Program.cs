@@ -17,7 +17,7 @@ namespace ByteBank.SistemaAgencia
 
             string textoVazio = "";
             string textoNulo = null;
-            string textoQualquer = "kjhfsdjhgsdfjksdf";
+            string textoQualquer = "ThisIsANullPage";
 
             Console.WriteLine(String.IsNullOrEmpty(textoVazio));
             Console.WriteLine(String.IsNullOrEmpty(textoNulo));

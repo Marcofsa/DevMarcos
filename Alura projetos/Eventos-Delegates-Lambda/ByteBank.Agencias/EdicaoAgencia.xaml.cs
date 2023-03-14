@@ -42,23 +42,36 @@ namespace ByteBank.Agencias
 
         private void AtualizarControles()
         {
-
-           RoutedEventHandler dialogResultTrue = delegate (object o, RoutedEventArgs e)
-            {
-               DialogResult = true;
-            };
-
-            RoutedEventHandler dialogResultFalse = delegate (object o, RoutedEventArgs e)
-            {
-                DialogResult = false;
-            };
+            RoutedEventHandler dialogResultTrue = (o, e) => DialogResult = true;
+            RoutedEventHandler dialogResultFalse = (o, e) => DialogResult = false;
 
             var okEventHandler = dialogResultTrue + Fechar;
             var cancelarEventHandler = dialogResultFalse + Fechar;
 
             btnOk.Click += okEventHandler;
             btnCancelar.Click += cancelarEventHandler;
-        } 
+
+            txtNumero.Validacao += ValidarCampoNulo;
+            txtNumero.Validacao += ValidarSomenteDigito;
+
+            txtNome.Validacao += ValidarCampoNulo;
+            txtDescricao.Validacao += ValidarCampoNulo;
+            txtEndereco.Validacao += ValidarCampoNulo;
+            txtTelefone.Validacao += ValidarCampoNulo;
+        }
+        
+        private void ValidarSomenteDigito(object sender, ValidacaoEventArgs e)
+        {
+            var ehValido = e.Texto.All(Char.IsDigit);
+            e.EhValido = ehValido;
+        }
+
+        private void ValidarCampoNulo(object sender, ValidacaoEventArgs e)
+        {
+            var ehValido = !String.IsNullOrEmpty(e.Texto);
+            e.EhValido = ehValido;
+        }
+
         private void Fechar(object sender, EventArgs e) =>
             Close();
     }
